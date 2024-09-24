@@ -1,13 +1,15 @@
-import {defineField, defineType} from 'sanity'
+import {DocumentTextIcon} from '@sanity/icons'
+import {defineArrayMember, defineField, defineType} from 'sanity'
 
-export default defineType({
+export const postType = defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
+  icon: DocumentTextIcon,
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: '標題',
       type: 'string',
     }),
     defineField({
@@ -21,36 +23,48 @@ export default defineType({
     }),
     defineField({
       name: 'author',
-      title: 'Author',
+      title: '作者',
       type: 'reference',
       to: {type: 'author'},
     }),
     defineField({
       name: 'mainImage',
-      title: 'Main image',
+      title: '封面圖片',
       type: 'image',
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: '圖片描述',
+        },
+      ],
     }),
     defineField({
       name: 'categories',
-      title: 'Categories',
+      title: '標籤',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      of: [defineArrayMember({type: 'reference', to: {type: 'category'}})],
     }),
     defineField({
       name: 'publishedAt',
-      title: 'Published at',
+      title: '發布時間',
       type: 'datetime',
     }),
     defineField({
       name: 'body',
-      title: 'Body',
+      title: '內容',
       type: 'blockContent',
     }),
+    defineField({
+      name: 'views',
+      title: '瀏覽次數',
+      type: 'number',
+      initialValue: 0,
+    }),
   ],
-
   preview: {
     select: {
       title: 'title',
