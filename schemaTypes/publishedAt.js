@@ -1,3 +1,6 @@
+import {DocumentTextIcon} from '@sanity/icons'
+import {defineArrayMember, defineField, defineType} from 'sanity'
+
 export const postType = defineType({
   name: 'post',
   title: 'Post',
@@ -25,4 +28,4 @@ export const postType = defineType({
     },
     // 其他字段
   ],
-});
+})

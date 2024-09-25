@@ -76,4 +76,16 @@ export const postType = defineType({
       return {...selection, subtitle: author && `by ${author}`}
     },
   },
+  orderings: [
+    {
+      title: 'Published Date, New',
+      name: 'publishedDesc',
+      by: [{field: 'publishedAt', direction: 'desc'}],
+    },
+    {
+      title: 'Published Date, Old',
+      name: 'publishedAsc',
+      by: [{field: 'publishedAt', direction: 'asc'}],
+    },
+  ],
 })
