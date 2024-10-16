@@ -1,11 +1,11 @@
-import {IoSchoolOutline} from 'react-icons/io5'
+import {MdOutlineHomeWork} from 'react-icons/md'
 import {defineType} from 'sanity'
 
-export const school = defineType({
-  name: 'school',
-  title: '語言學校',
+export const jobList = defineType({
+  name: 'jobList',
+  title: '打工度假職缺',
   type: 'document',
-  icon: IoSchoolOutline,
+  icon: MdOutlineHomeWork,
   fields: [
     {
       name: 'mainImage',
@@ -24,7 +24,7 @@ export const school = defineType({
     },
     {
       name: 'name',
-      title: '名稱',
+      title: '職缺名稱',
       type: 'string',
     },
     {
@@ -59,15 +59,9 @@ export const school = defineType({
     },
     {
       name: 'description',
-      title: '學校簡介',
+      title: '簡介',
       type: 'text',
       description: '學校的簡短介紹。',
-    },
-    {
-      name: 'character',
-      title: '學校',
-      type: 'blockContent',
-      description: '學校特色描述',
     },
     {
       name: 'slideshow',

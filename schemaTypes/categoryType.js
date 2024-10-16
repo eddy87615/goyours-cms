@@ -12,13 +12,13 @@ export const categoryType = defineType({
       title: '標籤名',
       type: 'string',
     }),
-    // defineField({
-    //   name: 'slug',
-    //   type: 'slug',
-    //   options: {
-    //     source: 'title',
-    //   },
-    // }),
+    defineField({
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+      },
+    }),
     defineField({
       name: 'description',
       title: '標籤描述',
