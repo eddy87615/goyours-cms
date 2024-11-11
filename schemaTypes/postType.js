@@ -9,13 +9,14 @@ export const postType = defineType({
   fields: [
     defineField({
       name: 'title',
-      title: '標題',
+      title: '文章標題',
       type: 'string',
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      description: '文章的代稱或編號，為了網頁生成，請好好填寫',
       options: {
         source: 'title',
         maxLength: 96,

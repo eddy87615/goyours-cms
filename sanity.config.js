@@ -6,6 +6,7 @@
 
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
+import {colorInput} from '@sanity/color-input' // 引入 color-input 插件
 import {structureTool} from 'sanity/structure'
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
@@ -17,12 +18,13 @@ export default defineConfig({
   basePath: '/studio',
   projectId: '87td6piu',
   dataset: 'production',
-  token: token,
+  token: process.env.NEXT_PUBLIC_API_TOKEN,
   schema,
   plugins: [
     structureTool({structure}),
     // Vision is for querying with GROQ from inside the Studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),
+    colorInput(), // 將 color-input 插件加入 plugins
   ],
 })
