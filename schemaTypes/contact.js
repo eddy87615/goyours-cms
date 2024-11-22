@@ -26,16 +26,19 @@ export const contact = defineType({
       name: 'phone',
       title: '行動電話',
       type: 'string',
+      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
     },
     {
       name: 'lineId',
       title: 'Line ID',
       type: 'string',
+      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
     },
     {
       name: 'email',
       title: '電子郵件',
       type: 'string',
+      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
     },
     {
       name: 'case',
@@ -57,6 +60,7 @@ export const contact = defineType({
         layout: 'checkbox',
       },
     },
+    {name: 'tellus', title: '想對我們說的話', type: 'text'},
     {
       name: 'remarks',
       title: '備註',

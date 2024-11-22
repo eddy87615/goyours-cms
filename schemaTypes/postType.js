@@ -16,7 +16,8 @@ export const postType = defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: '文章的代稱或編號，為了網頁生成，請好好填寫',
+      description:
+        '文章代稱或編號，為了網頁生成，請好好填寫（推薦可以有自己的取名邏輯，例如：打工度假相關文章取名為『WorkingHoliday-20240101』）',
       options: {
         source: 'title',
         maxLength: 96,

@@ -1,11 +1,13 @@
-import {IoIosList, IoIosCheckmarkCircle, IoIosAlert} from 'react-icons/io'
+import {IoIosCheckmarkCircle, IoIosAlert} from 'react-icons/io'
+import {PiIdentificationCardLight} from 'react-icons/pi'
+
 import {defineType} from 'sanity'
 
 export const jobapply = defineType({
   name: 'jobapply',
   title: '打工度假申請',
   type: 'document',
-  icon: IoIosList,
+  icon: PiIdentificationCardLight,
   fields: [
     {name: 'jobname', title: '申請工作名稱', type: 'string'},
     {
@@ -27,16 +29,19 @@ export const jobapply = defineType({
       name: 'phone',
       title: '行動電話',
       type: 'string',
+      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
     },
     {
       name: 'lineId',
       title: 'Line ID',
       type: 'string',
+      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
     },
     {
       name: 'email',
       title: '電子郵件',
       type: 'string',
+      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
     },
     {
       name: 'callTime',
@@ -50,6 +55,7 @@ export const jobapply = defineType({
       options: {
         accept: '.pdf',
       },
+      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
     },
     {
       name: 'contacted',
