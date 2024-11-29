@@ -26,19 +26,25 @@ export const contact = defineType({
       name: 'phone',
       title: '行動電話',
       type: 'string',
-      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
+      readOnly: ({currentUser}) => {
+        return !currentUser.roles.find(({name}) => name === 'administrator')
+      },
     },
     {
       name: 'lineId',
       title: 'Line ID',
       type: 'string',
-      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
+      readOnly: ({currentUser}) => {
+        return !currentUser.roles.find(({name}) => name === 'administrator')
+      },
     },
     {
       name: 'email',
       title: '電子郵件',
       type: 'string',
-      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
+      readOnly: ({currentUser}) => {
+        return !currentUser.roles.find(({name}) => name === 'administrator')
+      },
     },
     {
       name: 'case',

@@ -29,19 +29,25 @@ export const jobapply = defineType({
       name: 'phone',
       title: '行動電話',
       type: 'string',
-      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
+      readOnly: ({currentUser}) => {
+        return !currentUser.roles.find(({name}) => name === 'administrator')
+      },
     },
     {
       name: 'lineId',
       title: 'Line ID',
       type: 'string',
-      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
+      readOnly: ({currentUser}) => {
+        return !currentUser.roles.find(({name}) => name === 'administrator')
+      },
     },
     {
       name: 'email',
       title: '電子郵件',
       type: 'string',
-      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
+      readOnly: ({currentUser}) => {
+        return !currentUser.roles.find(({name}) => name === 'administrator')
+      },
     },
     {
       name: 'callTime',
@@ -53,9 +59,11 @@ export const jobapply = defineType({
       title: '履歷表',
       type: 'file',
       options: {
-        accept: '.pdf',
+        accept: '.pdf,.doc,.docx', // 限制檔案類型
       },
-      hidden: ({currentUser}) => !currentUser.roles.includes('administrator'), // 僅顯示給管理員
+      readOnly: ({currentUser}) => {
+        return !currentUser.roles.find(({name}) => name === 'administrator')
+      },
     },
     {
       name: 'contacted',
