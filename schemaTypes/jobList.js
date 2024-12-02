@@ -109,7 +109,7 @@ export const jobList = defineType({
       name: 'jobtime',
       title: '勤務時間',
       type: 'text',
-      description: '簡短說明勤務時間',
+      description: '簡短說明勤務時間，用09:00~17:00的格式表示',
     },
     {
       name: 'workhour',
@@ -133,13 +133,13 @@ export const jobList = defineType({
       name: 'salary',
       title: '薪資',
       type: 'string',
-      description: '輸入基本薪資數字',
+      description: '輸入基本薪資數字，數字就好',
     },
     {
       name: 'privilege',
       title: '福利厚生',
       type: 'text',
-      description: '簡短說明福利厚生',
+      description: '簡短說明福利厚生，例如交通費補助，住宿補助等等',
     },
     {
       name: 'japanese',

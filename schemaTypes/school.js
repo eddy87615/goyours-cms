@@ -248,6 +248,7 @@ export const school = defineType({
       name: 'character',
       title: '學校特色',
       type: 'array',
+      description: '有點麻煩，不過特色的標題跟描述要分開填寫，排版才不會跑掉',
       of: [
         {
           type: 'object',

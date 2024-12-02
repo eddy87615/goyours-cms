@@ -63,7 +63,7 @@ export const blockContentType = defineType({
           {
             title: '文字顏色',
             icon: ColorWheelIcon,
-            name: 'favoriteColor',
+            name: 'color',
             type: 'object',
             fields: [
               {

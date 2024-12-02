@@ -59,6 +59,8 @@ export const postType = defineType({
       name: 'body',
       title: '內容',
       type: 'blockContent',
+      description:
+        '標題會生成文章內的連結，大標題會變成最大的目錄連結，中標題次之，小標題不會生成連結。',
     }),
     defineField({
       name: 'views',
@@ -80,12 +82,12 @@ export const postType = defineType({
   },
   orderings: [
     {
-      title: 'Published Date, New',
+      title: '發文日期從新到舊',
       name: 'publishedDesc',
       by: [{field: 'publishedAt', direction: 'desc'}],
     },
     {
-      title: 'Published Date, Old',
+      title: '發文日期從舊到新',
       name: 'publishedAsc',
       by: [{field: 'publishedAt', direction: 'asc'}],
     },
