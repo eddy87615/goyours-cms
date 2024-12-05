@@ -174,4 +174,10 @@ export const jobList = defineType({
       ],
     },
   ],
+  preview: {
+    select: {
+      title: 'company',
+      media: 'mainImage',
+    },
+  },
 })

@@ -4,10 +4,11 @@ export const structure = (S) =>
     .title('Go Yours後台')
     .items([
       S.documentTypeListItem('post').title('文章'),
+      S.documentTypeListItem('school').title('語言學校'),
+      S.documentTypeListItem('jobList').title('打工度假職缺'),
+      S.divider(),
       S.documentTypeListItem('contact').title('聯絡資料'),
       S.documentTypeListItem('jobapply').title('打工度假申請'),
-      S.documentTypeListItem('jobList').title('打工度假職缺'),
-      S.documentTypeListItem('school').title('語言學校'),
       // S.documentTypeListItem('user').title('會員資料'),
       S.divider(),
       S.documentTypeListItem('caseOptions').title('表單諮詢方案'),
