@@ -63,6 +63,12 @@ export const postType = defineType({
         '標題會生成文章內的連結，大標題會變成最大的目錄連結，中標題次之，小標題不會生成連結。',
     }),
     defineField({
+      name: 'description',
+      title: '文章描述',
+      type: 'text',
+      description: '文章的簡短描述，用於meta標籤的顯示，以完善SEO',
+    }),
+    defineField({
       name: 'views',
       title: '瀏覽次數',
       type: 'number',

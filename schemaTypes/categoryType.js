@@ -19,10 +19,5 @@ export const categoryType = defineType({
         source: 'title',
       },
     }),
-    // defineField({
-    //   name: 'description',
-    //   title: '標籤描述',
-    //   type: 'text',
-    // }),
   ],
 })

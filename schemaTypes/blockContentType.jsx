@@ -12,6 +12,7 @@ import {ImageIcon, ColorWheelIcon} from '@sanity/icons'
  *    type: 'blockContent'
  *  }
  */
+
 export const blockContentType = defineType({
   title: 'Block Content',
   name: 'blockContent',
@@ -19,34 +20,23 @@ export const blockContentType = defineType({
   of: [
     defineArrayMember({
       type: 'block',
-      // Styles let you define what blocks can be marked up as. The default
-      // set corresponds with HTML tags, but you can set any title or value
-      // you want, and decide how you want to deal with it where you want to
-      // use your content.
       styles: [
         {title: '內文', value: 'normal'},
-        // {title: 'H1', value: 'h1'},
         {title: '大標題', value: 'h2'},
         {title: '中標題', value: 'h3'},
         {title: '小標題', value: 'h4'},
-        // {title: 'Quote', value: 'blockquote'},
       ],
       lists: [
         {title: '數字列表', value: 'number'},
         {title: '點點列表', value: 'bullet'},
       ],
-      // Marks let you mark up inline text in the Portable Text Editor
       marks: {
-        // Decorators usually describe a single property – e.g. a typographic
-        // preference or highlighting
         decorators: [
           {title: '粗體', value: 'strong'},
           {title: '斜體', value: 'em'},
           {title: '底線', value: 'underline'},
           {title: '刪除線', value: 'strike-through'},
         ],
-
-        // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
             title: '超連結',
@@ -79,9 +69,6 @@ export const blockContentType = defineType({
         ],
       },
     }),
-    // You can add additional types here. Note that you can't use
-    // primitive types such as 'string' and 'number' in the same array
-    // as a block type.
     defineArrayMember({
       type: 'image',
       title: '圖片',
@@ -107,6 +94,11 @@ export const blockContentType = defineType({
           of: [{type: 'image'}],
         },
       ],
+    }),
+    defineArrayMember({
+      name: 'table',
+      title: '表格',
+      type: 'table', // 來自插件的表格類型
     }),
   ],
 })

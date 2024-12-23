@@ -8,6 +8,7 @@ import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
 import {colorInput} from '@sanity/color-input' // 引入 color-input 插件
 import {structureTool} from 'sanity/structure'
+import {table} from '@sanity/table' // 引入 table 插件
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import {apiVersion, token} from './env'
@@ -26,5 +27,6 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),
     colorInput(), // 將 color-input 插件加入 plugins
+    table(),
   ],
 })

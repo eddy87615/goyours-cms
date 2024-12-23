@@ -74,8 +74,10 @@ export const jobList = defineType({
         list: [
           {title: '關東地區', value: '關東地區'},
           {title: '關西地區', value: '關西地區'},
+          {title: '中部地區', value: '中部地區'},
           {title: '九州地區', value: '九州地區'},
           {title: '北海道', value: '北海道'},
+          {title: '東北地區', value: '東北地區'},
           {title: '沖繩', value: '沖繩'},
         ],
       },
@@ -88,8 +90,9 @@ export const jobList = defineType({
         list: [
           {title: '服務業', value: '服務業'},
           {title: '製造業', value: '製造業'},
-          {title: '農業', value: '農業'},
           {title: '觀光業', value: '觀光業'},
+          {title: '農業', value: '農業'},
+          {title: '其他', value: '其他'},
         ],
       },
     },
