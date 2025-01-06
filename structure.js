@@ -11,6 +11,7 @@ export const structure = (S) =>
       S.documentTypeListItem('jobapply').title('打工度假申請'),
       // S.documentTypeListItem('user').title('會員資料'),
       S.divider(),
+      S.documentTypeListItem('inform').title('最新通知'),
       S.documentTypeListItem('caseOptions').title('表單諮詢方案'),
       S.documentTypeListItem('author').title('文章作者'),
       S.documentTypeListItem('category').title('文章類別'),
@@ -33,6 +34,7 @@ export const structure = (S) =>
             'jobapply',
             'feedBack',
             'faqs',
+            'inform',
           ].includes(item.getId()),
       ),
     ])

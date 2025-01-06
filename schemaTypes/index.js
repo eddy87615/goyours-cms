@@ -10,6 +10,7 @@ import {jobapply} from './jobapply'
 import {feedBack} from './feedBack'
 import {faqs} from './faqs'
 import {school} from './school'
+import {inform} from './inform'
 export const schema = {
   types: [
     blockContentType,
@@ -24,5 +25,6 @@ export const schema = {
     feedBack,
     faqs,
     school,
+    inform,
   ],
 }
