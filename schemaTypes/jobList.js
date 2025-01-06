@@ -155,7 +155,7 @@ export const jobList = defineType({
           {title: 'N3以上', value: 'N3以上'},
           {title: 'N4以上', value: 'N4以上'},
           {title: 'N5以上', value: 'N5以上'},
-          {title: '日語會話程度', value: '基本日語會話程度'},
+          {title: '基本日語會話程度', value: '基本日語會話程度'},
           {title: '無要求', value: '無要求'},
         ],
       },
