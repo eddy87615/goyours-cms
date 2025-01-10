@@ -13,11 +13,13 @@ export const structure = (S) =>
       S.divider(),
       S.documentTypeListItem('inform').title('最新通知'),
       S.documentTypeListItem('caseOptions').title('表單諮詢方案'),
+      S.documentTypeListItem('download').title('下載資料'),
       S.documentTypeListItem('author').title('文章作者'),
       S.documentTypeListItem('category').title('文章類別'),
       S.divider(),
       S.documentTypeListItem('feedBack').title('學員回饋'),
       S.documentTypeListItem('faqs').title('常見QA'),
+      S.documentTypeListItem('keywordSetting').title('關鍵字設定'),
 
       ...S.documentTypeListItems().filter(
         (item) =>
@@ -35,6 +37,8 @@ export const structure = (S) =>
             'feedBack',
             'faqs',
             'inform',
+            'download',
+            'keywordSetting',
           ].includes(item.getId()),
       ),
     ])

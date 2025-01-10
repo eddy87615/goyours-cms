@@ -11,6 +11,8 @@ import {feedBack} from './feedBack'
 import {faqs} from './faqs'
 import {school} from './school'
 import {inform} from './inform'
+import {download} from './download'
+import {keywordSetting} from './keywordSetting'
 export const schema = {
   types: [
     blockContentType,
@@ -26,5 +28,7 @@ export const schema = {
     faqs,
     school,
     inform,
+    download,
+    keywordSetting,
   ],
 }
