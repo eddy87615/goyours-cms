@@ -9,19 +9,6 @@ export const keywordSetting = defineType({
   icon: VscSymbolKeyword,
   fields: [
     {
-      name: 'title',
-      title: '網頁標題',
-      type: 'text',
-      description: '融合主要關鍵字編寫網頁的標題，顯示在網頁標籤頁中的文字',
-    },
-    {name: 'keyword', title: '短尾關鍵字', type: 'text'},
-    {
-      name: 'description',
-      title: '網頁描述',
-      type: 'text',
-      description: '融合長尾關鍵字編寫網頁的簡單描述',
-    },
-    {
       name: 'page',
       title: '畫面選擇',
       type: 'string',
@@ -38,6 +25,19 @@ export const keywordSetting = defineType({
         ],
       },
       description: '選擇要設定關鍵字的畫面選項',
+    },
+    {
+      name: 'title',
+      title: '網頁標題',
+      type: 'text',
+      description: '融合主要關鍵字編寫網頁的標題，顯示在網頁標籤頁中的文字',
+    },
+    {name: 'keyword', title: '短尾關鍵字', type: 'text'},
+    {
+      name: 'description',
+      title: '網頁描述',
+      type: 'text',
+      description: '融合長尾關鍵字編寫網頁的簡單描述',
     },
   ],
   preview: {

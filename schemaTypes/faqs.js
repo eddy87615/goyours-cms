@@ -8,8 +8,6 @@ export const faqs = defineType({
   type: 'document',
   icon: FaRegCircleQuestion,
   fields: [
-    {name: 'question', title: '問題', type: 'text'},
-    {name: 'answer', title: '回答', type: 'text'},
     {
       name: 'type',
       title: '問題類型',
@@ -21,6 +19,41 @@ export const faqs = defineType({
         ],
       },
       description: '選擇問題類型',
+    },
+    {name: 'question', title: '問題', type: 'text'},
+    {
+      name: 'answer',
+      title: '回答',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+          styles: [],
+          lists: [],
+          marks: {
+            decorators: [],
+            annotations: [
+              {
+                title: 'URL',
+                name: 'link',
+                type: 'object',
+                fields: [
+                  {
+                    title: '網址',
+                    name: 'href',
+                    type: 'url',
+                  },
+                  {
+                    title: '在新分頁開啟',
+                    name: 'blank',
+                    type: 'boolean',
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      ],
     },
   ],
   preview: {
