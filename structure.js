@@ -7,6 +7,8 @@ export const structure = (S) =>
       S.documentTypeListItem('school').title('語言學校'),
       S.documentTypeListItem('jobList').title('打工度假職缺'),
       S.divider(),
+      S.documentTypeListItem('homeSchool').title('首頁推薦語言學校'),
+      S.divider(),
       S.documentTypeListItem('contact').title('聯絡資料'),
       S.documentTypeListItem('jobapply').title('打工度假申請'),
       // S.documentTypeListItem('user').title('會員資料'),
@@ -39,6 +41,7 @@ export const structure = (S) =>
             'inform',
             'download',
             'keywordSetting',
+            'homeSchool',
           ].includes(item.getId()),
       ),
     ])

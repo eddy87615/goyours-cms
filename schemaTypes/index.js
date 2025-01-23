@@ -13,6 +13,8 @@ import {school} from './school'
 import {inform} from './inform'
 import {download} from './download'
 import {keywordSetting} from './keywordSetting'
+import {homeSchool} from './homeSchool'
+
 export const schema = {
   types: [
     blockContentType,
@@ -30,5 +32,6 @@ export const schema = {
     inform,
     download,
     keywordSetting,
+    homeSchool,
   ],
 }

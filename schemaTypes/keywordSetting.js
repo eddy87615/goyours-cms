@@ -18,7 +18,9 @@ export const keywordSetting = defineType({
           {title: '關於我們', value: '關於我們'},
           {title: '文章專區', value: '文章專區'},
           {title: '打工度假', value: '打工度假'},
+          {title: '打工度假職缺', value: '打工度假職缺'},
           {title: '日本留學', value: '日本留學'},
+          {title: '日本留學學校', value: '日本留學學校'},
           {title: '常見Q&A', value: '常見Q&A'},
           {title: '下載專區', value: '下載專區'},
           {title: '聯絡我們', value: '聯絡我們'},
@@ -32,7 +34,7 @@ export const keywordSetting = defineType({
       type: 'text',
       description: '融合主要關鍵字編寫網頁的標題，顯示在網頁標籤頁中的文字',
     },
-    {name: 'keyword', title: '短尾關鍵字', type: 'text'},
+    {name: 'keyword', title: '主要關鍵字', type: 'text'},
     {
       name: 'description',
       title: '網頁描述',
