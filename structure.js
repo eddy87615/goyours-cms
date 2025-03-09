@@ -21,7 +21,7 @@ export const structure = (S) =>
       S.divider(),
       S.documentTypeListItem('feedBack').title('學員回饋'),
       S.documentTypeListItem('faqs').title('常見QA'),
-      S.documentTypeListItem('keywordSetting').title('關鍵字設定'),
+      // S.documentTypeListItem('keywordSetting').title('關鍵字設定'),
 
       ...S.documentTypeListItems().filter(
         (item) =>

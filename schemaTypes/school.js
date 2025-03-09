@@ -142,6 +142,7 @@ export const school = defineType({
           {title: '九月', value: '九月'},
           {title: '十月', value: '十月'},
           {title: '隨時入學', value: '隨時入學'},
+          {title: '其他', value: '其他'},
         ],
       },
     },
@@ -282,9 +283,9 @@ export const school = defineType({
         list: [
           {title: '我們的推薦', value: '我們的推薦'},
           {title: '高人氣學校', value: '高人氣學校'},
-          // 可以在這裡新增更多標籤選項
         ],
       },
+      initialValue: [],
     },
     {
       name: 'gallery',
@@ -294,6 +295,51 @@ export const school = defineType({
       options: {
         layout: 'grid',
       },
+    },
+  ],
+  preview: {
+    select: {
+      title: 'name',
+      subtitle: 'city',
+      media: 'logo',
+      tags: 'tags',
+    },
+    prepare(selection) {
+      const {title, subtitle, tags = []} = selection
+      const tagInfo = tags.length ? ` • ${tags.join(', ')}` : ''
+      return {...selection, subtitle: `${subtitle}${tagInfo}`}
+    },
+  },
+  orderings: [
+    {
+      title: '學校名稱（A-Z）',
+      name: 'nameAsc',
+      by: [{field: 'name', direction: 'asc'}], // 學校名稱從 A → Z
+    },
+    {
+      title: '學校名稱（Z-A）',
+      name: 'nameDesc',
+      by: [{field: 'name', direction: 'desc'}], // 學校名稱從 Z → A
+    },
+    {
+      title: '地區（A-Z）',
+      name: 'cityAsc',
+      by: [{field: 'city', direction: 'asc'}], // 地區名稱從 A → Z
+    },
+    {
+      title: '地區（Z-A）',
+      name: 'cityDesc',
+      by: [{field: 'city', direction: 'desc'}], // 地區名稱從 Z → A
+    },
+    {
+      title: '更新時間（新到舊）',
+      name: 'publishedAtDesc',
+      by: [{field: 'publishedAt', direction: 'desc'}], // 依更新時間排序
+    },
+    {
+      title: '更新時間（舊到新）',
+      name: 'publishedAtDesc',
+      by: [{field: 'publishedAt', direction: 'asc'}], // 依更新時間排序
     },
   ],
 })

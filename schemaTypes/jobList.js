@@ -180,7 +180,14 @@ export const jobList = defineType({
   preview: {
     select: {
       title: 'company',
+      subtitle: 'area',
+      tags: 'tags',
       media: 'mainImage',
+    },
+    prepare(selection) {
+      const {title, subtitle, tags = []} = selection
+      const tagInfo = tags.length ? ` • ${tags.join(', ')}` : ''
+      return {...selection, subtitle: `${subtitle}${tagInfo}`}
     },
   },
 })
