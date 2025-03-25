@@ -23,6 +23,11 @@ export const contact = defineType({
       type: 'string',
     },
     {
+      name: 'major',
+      title: '科系',
+      type: 'string',
+    },
+    {
       name: 'phone',
       title: '行動電話',
       type: 'string',
