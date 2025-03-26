@@ -106,11 +106,11 @@ export const jobList = defineType({
       type: 'string',
       options: {
         list: [
-          {title: '打工', value: '打工'},
+          {title: '打工度假', value: '打工度假'},
           {title: '就職', value: '就職'},
           {title: '特定一號', value: '特定一號'},
-          {title: '打工/就職', value: '打工/就職'},
-          {title: '打工/特定一號', value: '打工/特定一號'},
+          {title: '打工度假/就職', value: '打工度假/就職'},
+          {title: '打工度假/特定一號', value: '打工度假/特定一號'},
         ],
       },
     },
