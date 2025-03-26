@@ -88,11 +88,29 @@ export const jobList = defineType({
       type: 'string',
       options: {
         list: [
+          {title: '工廠', value: '工廠'},
+          {title: '飯店', value: '飯店'},
+          {title: '餐飲', value: '餐飲'},
+          {title: '機場地勤', value: '機場地勤'},
+          {title: '機場銷售', value: '機場銷售'},
+          {title: 'IT', value: 'IT'},
           {title: '服務業', value: '服務業'},
-          {title: '製造業', value: '製造業'},
-          {title: '觀光業', value: '觀光業'},
-          {title: '農業', value: '農業'},
+          {title: '事務職', value: '事務職'},
           {title: '其他', value: '其他'},
+        ],
+      },
+    },
+    {
+      name: 'visa',
+      title: '簽證需求',
+      type: 'string',
+      options: {
+        list: [
+          {title: '打工', value: '打工'},
+          {title: '就職', value: '就職'},
+          {title: '特定一號', value: '特定一號'},
+          {title: '打工/就職', value: '打工/就職'},
+          {title: '打工/特定一號', value: '打工/特定一號'},
         ],
       },
     },
