@@ -16,6 +16,7 @@ export const faqs = defineType({
         list: [
           {title: '留學', value: 'studying'},
           {title: '打工度假', value: 'working'},
+          {title: '日本就職', value: 'jpJob'},
         ],
       },
       description: '選擇問題類型',

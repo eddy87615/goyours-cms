@@ -31,6 +31,7 @@ export const JPjobList = defineType({
       name: 'title',
       title: '職缺名稱',
       type: 'string',
+      description: '可以把一些廢話拿掉',
     },
     {
       name: 'mainImage',
@@ -82,6 +83,7 @@ export const JPjobList = defineType({
       title: '募集職種',
       type: 'string',
       fieldset: 'hireCondition',
+      description: '這邊我會打得跟職缺名稱一樣',
     },
     {
       name: 'hiringType',
@@ -101,6 +103,7 @@ export const JPjobList = defineType({
       title: '職務内容',
       type: 'array',
       fieldset: 'hireCondition',
+      description: '用項目符號做成列表比較清楚',
       of: [
         {
           type: 'block',
@@ -139,6 +142,7 @@ export const JPjobList = defineType({
       title: '求めるスキル',
       type: 'array',
       fieldset: 'hireCondition',
+      description: '用項目符號做成列表比較清楚',
       of: [
         {
           type: 'block',
@@ -177,6 +181,7 @@ export const JPjobList = defineType({
       title: '就業時間',
       type: 'array',
       fieldset: 'hireCondition',
+      description: '可以簡單打幾點到幾點，也可以詳細說明',
       of: [
         {
           type: 'block',
@@ -215,6 +220,7 @@ export const JPjobList = defineType({
       title: '就業時間補足',
       type: 'array',
       fieldset: 'hireCondition',
+      description: '可以簡單打幾點到幾點，也可以詳細說明',
       of: [
         {
           type: 'block',
@@ -283,6 +289,7 @@ export const JPjobList = defineType({
       title: '月給',
       type: 'string',
       fieldset: 'hireCondition',
+      description: '用半形的數字跟~隔開，例如：400~500',
     },
     {
       name: 'workingLateSalary',
@@ -550,6 +557,7 @@ export const JPjobList = defineType({
       name: 'publishedAt',
       title: '發布日期',
       type: 'datetime',
+      description: '發布前記得選取右下角的「設定成當前的時間點」以便搜尋時可以確實找到最新的職缺',
     },
   ],
 })
