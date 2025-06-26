@@ -1,13 +1,13 @@
 import {IoIosCheckmarkCircle, IoIosAlert} from 'react-icons/io'
-import {PiIdentificationCardLight} from 'react-icons/pi'
+import {MdOutlineWorkOutline} from 'react-icons/md'
 
 import {defineType} from 'sanity'
 
-export const jobapply = defineType({
-  name: 'jobapply',
-  title: '打工職缺申請',
+export const JPjobapply = defineType({
+  name: 'JPjobapply',
+  title: '正職職缺申請',
   type: 'document',
-  icon: PiIdentificationCardLight,
+  icon: MdOutlineWorkOutline,
   fields: [
     {name: 'jobname', title: '申請工作名稱', type: 'string'},
     {
