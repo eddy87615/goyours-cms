@@ -68,7 +68,7 @@ export default {
       fieldset: 'overview',
     },
     {
-      name: 'propertt',
+      name: 'property',
       title: '資本金',
       type: 'string',
       fieldset: 'overview',
