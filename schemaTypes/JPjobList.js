@@ -413,8 +413,22 @@ export const JPjobList = defineType({
     {
       name: 'workingLateSalary',
       title: '固定残業代',
-      type: 'string',
-      fieldset: 'hireCondition',
+      type: 'array',
+      fieldset: 'treatment',
+      of: [
+        {
+          type: 'block',
+          styles: [],
+          lists: [
+            {title: '項目符號', value: 'bullet'},
+            {title: '編號列表', value: 'number'},
+          ],
+          marks: {
+            decorators: [],
+            annotations: [],
+          },
+        },
+      ],
     },
     {
       name: 'promotion',
@@ -527,14 +541,42 @@ export const JPjobList = defineType({
     {
       name: 'otherPay',
       title: 'その他手当',
-      type: 'string',
+      type: 'array',
       fieldset: 'treatment',
+      of: [
+        {
+          type: 'block',
+          styles: [],
+          lists: [
+            {title: '項目符號', value: 'bullet'},
+            {title: '編號列表', value: 'number'},
+          ],
+          marks: {
+            decorators: [],
+            annotations: [],
+          },
+        },
+      ],
     },
     {
       name: 'insurance',
       title: '各種保険・福利厚生',
-      type: 'string',
+      type: 'array',
       fieldset: 'treatment',
+      of: [
+        {
+          type: 'block',
+          styles: [],
+          lists: [
+            {title: '項目符號', value: 'bullet'},
+            {title: '編號列表', value: 'number'},
+          ],
+          marks: {
+            decorators: [],
+            annotations: [],
+          },
+        },
+      ],
     },
     {
       name: 'otherSupport',
@@ -559,8 +601,22 @@ export const JPjobList = defineType({
     {
       name: 'vacation',
       title: '休日休暇',
-      type: 'string',
+      type: 'array',
       fieldset: 'treatment',
+      of: [
+        {
+          type: 'block',
+          styles: [],
+          lists: [
+            {title: '項目符號', value: 'bullet'},
+            {title: '編號列表', value: 'number'},
+          ],
+          marks: {
+            decorators: [],
+            annotations: [],
+          },
+        },
+      ],
     },
     {
       name: 'yearHoliday',
